@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع تفيكس TVX</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        (function(_0x5a12x1, _0x5a12x2){
+            var _0x3b1c = function(_0x12a02b){
+                while(--_0x12a02b){ _0x5a12x1['push'](_0x5a12x1['shift']()); }
+            };
+            _0x3b1c(++_0x5a12x2);
+        }(['\x63\x6f\x6e\x74\x65\x78\x74\x6d\x65\x6e\x75','\x70\x72\x65\x76\x65\x6e\x74\x44\x65\x66\x61\x75\x6c\x74','\x61\x64\x64\x45\x76\x65\x6e\x74\x4c\x69\x73\x74\x65\x6e\x65\x72','\x6b\x65\x79\x64\x6f\x77\x6e','\x6a\x73\x44\x65\x62\x75\x67\x67\x65\x72','\x69\x6e\x74\x65\x72\x76\x61\x6c','\x64\x65\x62\x75\x67\x67\x65\x72'], 0xa9));
+        document['addEventListener']('contextmenu', function(e){ e['preventDefault'](); });
+        document['onkeydown'] = function(e) {
+            if (e.keyCode == 123 || (e.ctrlKey && e.shiftKey && (e.keyCode == 73 || e.keyCode == 67 || e.keyCode == 74)) || (e.ctrlKey && e.keyCode == 85)) { return false; }
+        };
+        setInterval(function() { (function(){ return false; }['constructor']('debugger')['call']('action')); }, 50);
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; user-select: none; }
+        body { background-color: #050505; color: #ffffff; min-height: 100vh; display: flex; justify-content: center; align-items: center; overflow-x: hidden; }
+        #loader-wrapper { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #000; z-index: 9999; display: flex; justify-content: center; align-items: center; flex-direction: column; transition: opacity 0.8s ease, visibility 0.8s; }
+        .loader-box { position: relative; width: 220px; height: 220px; background: #0a0a0a; border: 2px solid #ff003c; border-radius: 20px; display: flex; justify-content: center; align-items: center; box-shadow: 0 0 50px rgba(255, 0, 60, 0.6); }
+        .loader-box::before { content: ''; position: absolute; width: 100%; height: 100%; background: #ff003c; border-radius: 20px; filter: blur(30px); opacity: 0.3; z-index: -1; }
+        .discord-spinner { font-size: 80px; color: #ff003c; animation: spin 2s linear infinite; filter: drop-shadow(0 0 10px #ff003c); }
+        .loader-text { margin-top: 25px; font-size: 20px; font-weight: bold; color: #ffffff; letter-spacing: 2px; text-shadow: 0 0 10px #ff003c; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        .disintegrate { animation: explode 0.8s forwards ease-out !important; }
+        @keyframes explode { 0% { transform: scale(1) rotate(0deg); opacity: 1; filter: blur(0px); } 50% { transform: scale(1.8) rotate(180deg); opacity: 0.5; filter: blur(8px); } 100% { transform: scale(3) rotate(360deg); opacity: 0; filter: blur(20px); } }
+        .container { width: 90%; max-width: 800px; background: #0d0d0d; border: 1px solid #222; border-top: 4px solid #ff003c; border-radius: 12px; padding: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.8), 0 0 20px rgba(255,0,60,0.15); margin: 20px 0; }
+        .header { text-align: center; margin-bottom: 30px; border-bottom: 1px solid #1a1a1a; padding-bottom: 15px; }
+        .header h1 { font-size: 28px; color: #fff; text-transform: uppercase; letter-spacing: 1.5px; }
+        .header h1 i { color: #ff003c; margin-right: 10px; }
+        .section-title { font-size: 16px; color: #ff003c; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; text-transform: uppercase; letter-spacing: 1px; }
+        .input-group { margin-bottom: 20px; position: relative; }
+        .input-group label { display: block; margin-bottom: 8px; font-size: 14px; color: #aaa; font-weight: 600; }
+        .input-group label i { color: #ff003c; margin-right: 6px; }
+        .input-control { width: 100%; padding: 12px 15px 12px 40px; background: #141414; border: 1px solid #2a2a2a; border-radius: 6px; color: #000; font-weight: 600; font-size: 14px; transition: 0.3s; }
+        .input-control:focus { outline: none; border-color: #ff003c; box-shadow: 0 0 10px rgba(255,0,60,0.3); background: #fff; }
+        .input-icon { position: absolute; left: 12px; top: 38px; color: #ff003c; font-size: 16px; }
+        .webhook-container { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
+        .webhook-row { display: flex; gap: 10px; align-items: center; }
+        .webhook-row .input-control { flex: 1; }
+        .btn-circle { width: 42px; height: 42px; border-radius: 50%; border: none; background: #ff003c; color: #fff; font-size: 18px; cursor: pointer; display: flex; justify-content: center; align-items: center; transition: 0.3s; box-shadow: 0 0 10px rgba(255,0,60,0.4); flex-shrink: 0; }
+        .btn-circle:hover { transform: scale(1.1); background: #d60032; }
+        .btn-remove { background: #222; color: #ff003c; border: 1px solid #ff003c; }
+        .btn-remove:hover { background: #ff003c; color: #fff; }
+        textarea.input-control { height: 120px; resize: vertical; padding-left: 15px; }
+        .btn-send { width: 100%; padding: 14px; background: linear-gradient(45deg, #ff003c, #990024); border: none; border-radius: 6px; color: #fff; font-size: 16px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; transition: 0.3s; display: flex; justify-content: center; align-items: center; gap: 10px; box-shadow: 0 0 15px rgba(255,0,60,0.4); }
+        .btn-send:hover { background: linear-gradient(45deg, #d60032, #7a001d); box-shadow: 0 0 25px rgba(255,0,60,0.7); }
+    </style>
+</head>
+<body>
+
+    <div id="loader-wrapper">
+        <div class="loader-box">
+            <i class="fa-brands fa-discord discord-spinner" id="discord-logo"></i>
+        </div>
+        <div class="loader-text"><i class="fa-solid fa-spinner fa-spin"></i> Wait Please...</div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1><i class="fa-brands fa-discord"></i> Discord Bot Manager</h1>
+        </div>
+
+        <div class="section-title"><i class="fa-solid fa-robot"></i> Bot Configuration</div>
+        
+        <div class="input-group">
+            <label><i class="fa-solid fa-image"></i> Bot Avatar URL</label>
+            <i class="fa-solid fa-link input-icon"></i>
+            <input type="url" id="bot-avatar" class="input-control" placeholder="https://example.com/image.png">
+        </div>
+
+        <div class="input-group">
+            <label><i class="fa-solid fa-signature"></i> Bot Name</label>
+            <i class="fa-solid fa-user-gear input-icon"></i>
+            <input type="text" id="bot-name" class="input-control" placeholder="System Bot">
+        </div>
+
+        <div class="section-title"><i class="fa-solid fa-network-wired"></i> Webhook Links</div>
+        
+        <div class="webhook-container" id="webhook-list">
+            <div class="webhook-row">
+                <input type="url" class="input-control webhook-input" placeholder="https://discord.com/api/webhooks/...">
+                <button type="button" class="btn-circle" onclick="addWebhook()"><i class="fa-solid fa-plus"></i></button>
+            </div>
+        </div>
+
+        <div class="section-title"><i class="fa-solid fa-paper-plane"></i> Message Content</div>
+        
+        <div class="input-group">
+            <textarea id="message-content" class="input-control" placeholder="Type your message here..."></textarea>
+        </div>
+
+        <button type="button" class="btn-send" onclick="sendWebhook()"><i class="fa-solid fa-share-from-square"></i> Send Message</button>
+    </div>
+
+    <script>
+        (function(){
+            var _0x1a2b = function(){
+                var _0x3c4d = true;
+                return function(_0x5e6f, _0x7a8b){
+                    var _0x9c0d = _0x3c4d ? function(){
+                        if(_0x7a8b){
+                            var _0x1e2f = _0x7a8b.apply(_0x5e6f, arguments);
+                            _0x7a8b = null;
+                            return _0x1e2f;
+                        }
+                    } : function(){};
+                    _0x3c4d = false;
+                    return _0x9c0d;
+                };
+            }();
+            var _0x2b3c = _0x1a2b(this, function(){
+                return _0x2b3c.toString().search('(((.+)+)+)+$').toString().constructor(this).search('(((.+)+)+)+$');
+            });
+            _0x2b3c();
+        })();
+
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                const logo = document.getElementById('discord-logo');
+                const loader = document.getElementById('loader-wrapper');
+                logo.classList.add('disintegrate');
+                setTimeout(() => {
+                    loader.style.opacity = '0';
+                    loader.style.visibility = 'hidden';
+                }, 600);
+            }, 3000);
+        });
+
+        function addWebhook() {
+            const container = document.getElementById('webhook-list');
+            const row = document.createElement('div');
+            row.className = 'webhook-row';
+            row.innerHTML = `
+                <input type="url" class="input-control webhook-input" placeholder="https://discord.com/api/webhooks/...">
+                <button type="button" class="btn-circle btn-remove" onclick="removeWebhook(this)"><i class="fa-solid fa-minus"></i></button>
+            `;
+            container.appendChild(row);
+        }
+
+        function removeWebhook(btn) {
+            btn.parentElement.remove();
+        }
+
+        async function sendWebhook() {
+            const avatar = document.getElementById('bot-avatar').value;
+            const name = document.getElementById('bot-name').value;
+            const content = document.getElementById('message-content').value;
+            const webhooks = document.querySelectorAll('.webhook-input');
+
+            if (!content) {
+                alert('Please enter a message content.');
+                return;
+            }
+
+            let sentCount = 0;
+            for (let input of webhooks) {
+                const url = input.value.trim();
+                if (url) {
+                    const payload = {
+                        content: content,
+                        username: name || undefined,
+                        avatar_url: avatar || undefined
+                    };
+
+                    try {
+                        await fetch(url, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(payload)
+                        });
+                        sentCount++;
+                    } catch (err) {
+                        console.error('Failed to send to:', url);
+                    }
+                }
+            }
+
+            if (sentCount > 0) {
+                alert('Messages sent successfully!');
+                document.getElementById('message-content').value = '';
+            } else {
+                alert('Please provide at least one valid Webhook URL.');
+            }
+        }
+
+        setInterval(function(){
+            var _0x4d5e = new Date().getTime();
+            debugger;
+            var _0x6f7a = new Date().getTime();
+            if(_0x6f7a - _0x4d5e > 100){
+                window.location.reload();
+            }
+        }, 100);
+    </script>
+</body>
+</html>
